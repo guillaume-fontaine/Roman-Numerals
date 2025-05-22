@@ -22,4 +22,10 @@ class RomanNumeralsTest {
         assertThat(convert(10)).isEqualTo("X");
     }
 
+    @Test
+    @DisplayName("Convert 5 to 'V'")
+    void convert5(){
+        assertThat(convert(5)).isEqualTo("V");
+    }
+
 }
