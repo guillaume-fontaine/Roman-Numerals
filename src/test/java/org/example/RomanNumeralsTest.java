@@ -34,4 +34,10 @@ class RomanNumeralsTest {
         assertThat(convert(2)).isEqualTo("II");
     }
 
+    @Test
+    @DisplayName("Convert 3 to 'III'")
+    void convert3(){
+        assertThat(convert(3)).isEqualTo("III");
+    }
+
 }
