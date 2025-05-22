@@ -10,8 +10,9 @@ public class RomanNumerals {
     );
 
     public static String convert(int i) {
-        if (i == 2) return "II";
-        if (i == 3) return "III";
+        if (i >= 1 && i <= 3) {
+            return "I".repeat(i);
+        }
         return ROMAN_MAP.getOrDefault(i, "I");
     }
 }
