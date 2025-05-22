@@ -16,4 +16,10 @@ class RomanNumeralsTest {
         assertThat(convert(1)).isEqualTo("I");
     }
 
+    @Test
+    @DisplayName("Convert 10 to 'X'")
+    void convert10(){
+        assertThat(convert(10)).isEqualTo("X");
+    }
+
 }
