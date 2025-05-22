@@ -46,4 +46,10 @@ class RomanNumeralsTest {
         assertThat(convert(4)).isEqualTo("IV");
     }
 
+    @Test
+    @DisplayName("Convert 22 to 'XXII'")
+    void convert22(){
+        assertThat(convert(22)).isEqualTo("XXII");
+    }
+
 }
