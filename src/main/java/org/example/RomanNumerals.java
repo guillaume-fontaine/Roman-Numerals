@@ -7,7 +7,8 @@ public class RomanNumerals {
             10, "X",
             5, "V",
             1, "I",
-            2, "II"
+            2, "II",
+            3, "III"
     );
 
     public static String convert(int i) {
