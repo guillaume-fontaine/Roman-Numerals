@@ -6,7 +6,8 @@ public class RomanNumerals {
         1, "I",
         4, "IV",
         5, "V",
-        10, "X"
+        10, "X",
+            22, "XXII"
     );
 
     public static String convert(int i) {
