@@ -5,7 +5,8 @@ import java.util.Map;
 public class RomanNumerals {
     private static final Map<Integer, String> ROMAN_MAP = Map.of(
             10, "X",
-            5, "V"
+            5, "V",
+            1, "I"
     );
 
     public static String convert(int i) {
