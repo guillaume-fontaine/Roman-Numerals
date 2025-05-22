@@ -13,6 +13,9 @@ public class RomanNumerals {
         if (i >= 1 && i <= 3) {
             return "I".repeat(i);
         }
+        if (i == 4) {
+            return "IV";
+        }
         return ROMAN_MAP.getOrDefault(i, "I");
     }
 }
