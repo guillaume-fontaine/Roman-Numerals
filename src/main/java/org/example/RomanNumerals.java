@@ -1,12 +1,14 @@
 package org.example;
 
+import java.util.Map;
+
 public class RomanNumerals {
+    private static final Map<Integer, String> ROMAN_MAP = Map.of(
+            10, "X",
+            5, "V"
+    );
 
     public static String convert(int i) {
-        if (i == 10)
-            return "X";
-        if (i == 5)
-            return "V";
-        return "I";
+        return ROMAN_MAP.getOrDefault(i, "I");
     }
 }
