@@ -1,18 +1,26 @@
 package org.example;
 
+import java.util.LinkedHashMap;
+
 public class RomanNumerals {
 
-    private static final java.util.Map<Integer, String> ROMAN_MAP = java.util.Map.of(
-        1, "I",
-        4, "IV",
-        5, "V",
-        10, "X",
-            22, "XXII"
-    );
+   private static final LinkedHashMap<Integer, String> ROMAN_MAP = new LinkedHashMap<>() {{
+        put(10, "X");
+        put(5, "V");
+        put(4, "IV");
+        put(1, "I");
+    }};
 
-    public static String convert(int i) {
-        if (ROMAN_MAP.containsKey(i)) return ROMAN_MAP.get(i);
-        if (i > 1 && i < 4) return ROMAN_MAP.get(1).repeat(i);
-        return "?";
+
+    public static String convert(int number) {
+        if (number <= 0) return "?";
+        StringBuilder result = new StringBuilder();
+        for (var entry : ROMAN_MAP.entrySet()) {
+            while (number >= entry.getKey()) {
+                result.append(entry.getValue());
+                number -= entry.getKey();
+            }
+        }
+        return result.toString();
     }
 }
