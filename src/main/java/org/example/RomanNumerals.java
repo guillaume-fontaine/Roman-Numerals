@@ -1,21 +1,17 @@
 package org.example;
 
-import java.util.Map;
-
 public class RomanNumerals {
-    private static final Map<Integer, String> ROMAN_MAP = Map.of(
-            10, "X",
-            5, "V",
-            1, "I"
+
+    private static final java.util.Map<Integer, String> ROMAN_MAP = java.util.Map.of(
+        1, "I",
+        4, "IV",
+        5, "V",
+        10, "X"
     );
 
     public static String convert(int i) {
-        if (i >= 1 && i <= 3) {
-            return "I".repeat(i);
-        }
-        if (i == 4) {
-            return "IV";
-        }
-        return ROMAN_MAP.getOrDefault(i, "I");
+        if (ROMAN_MAP.containsKey(i)) return ROMAN_MAP.get(i);
+        if (i > 1 && i < 4) return ROMAN_MAP.get(1).repeat(i);
+        return "?";
     }
 }
