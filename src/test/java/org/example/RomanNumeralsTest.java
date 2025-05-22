@@ -28,4 +28,10 @@ class RomanNumeralsTest {
         assertThat(convert(5)).isEqualTo("V");
     }
 
+    @Test
+    @DisplayName("Convert 2 to 'II'")
+    void convert2(){
+        assertThat(convert(2)).isEqualTo("II");
+    }
+
 }
